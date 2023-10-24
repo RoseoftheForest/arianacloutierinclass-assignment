@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Comments Here!!!!-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Ari's Website and Assorted Info</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    
+    <body>
+        <br>
+            <div class="solid">
+                <h1>
+                Welcome to the Interactive ABCs of CSS Technology learning Website
+                </h1>
+            </div>
+        <br>
+        <h2>
+            Click on the buttons below to reveal and learn the CSS technology features of the corresponding letters 
+        </h2>
+        
+        <div class = 'container'>
+            <div class = "box">
+                <button onClick="functionName1();";>A</button>
+                <script>
+                
+                function functionName1() {
+                    var src = "img/css-letter-a.png";
+                    show_image("img/css-letter-a.png", 200, 200, "absolute", 1, "<alt>");
+                }
+            
+            
+                function show_image(src, width, height, position, zIndex, alt) {
+                    var img = document.createElement("img");
+                    img.src = src;
+                    img.width = width;
+                    img.height = height
+                    img.style.position = position;
+                    img.left = left;
+                    img.style.zIndex = zIndex;
+                    img.alt = alt;
+            
+                    document.body.appendChild(img);
+                }   
+                
+                
+            </script>
+            </div>
+        
+            <div class = container3>
+            <button onClick="functionName2();";>B</button>
+            <script>
+                    
+                    function functionName2() {
+                        var src = "img/css-letter-b.png";
+                        show_image("img/css-letter-b.png", 200, 200, "absolute", 1, "<alt>");
+                    }
+                
+                
+                    function show_image(src, width, height, position, zIndex, alt) {
+                        var img = document.createElement("img");
+                        img.src = src;
+                        img.style.width = width;
+                        img.style.height = height
+                        img.style.position = position;
+                        img.style.left = left+'px';
+                        img.style.top = top+'px';
+                        img.style.zIndex = zIndex;
+                        img.alt = alt;
+                
+                        document.body.appendChild(img);
+                    }   
+                    myImage = "img/css-letter-b.png";
+                    
+            </script>
+            </div>
+            <button onClick="functionName3();";>C</button>
+            <script>
+                
+                function functionName3() {
+                    var src = "img/css-letter-c.png";
+                    show_image("img/css-letter-c.png", 200, 200, "absolute", 1, "<alt>");
+                }
+            
+            
+                function show_image(src, width, height, position, zIndex, alt) {
+                    var img = document.createElement("img");
+                    img.src = src;
+                    img.width = width;
+                    img.height = height
+                    img.style.position = position;
+                    
+                    img.style.zIndex = zIndex;
+                    img.alt = alt;
+            
+                    document.body.appendChild(img);
+                }   
+                myImage = "img/css-letter-c.png";
+                
+            </script>
+            <button onClick="toggleImg;";>Hide</button>
+            <script>
+            myImage = "img/css-letter-c.png";    
+            if(myImage.style["visibility"]=="visible"){
+                myImage.style["visibility"]="hidden";
+            }
+            else
+            {
+                myImage.style["visibility"]="visible";
+            }
+            </script>
+        </div>    
+        
+    </body>
+    <footer>
+    </footer>
+</html>
