@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <title>Ari's Website and Assorted Info</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+           
+            
     </head>
     
     <body>
@@ -27,17 +29,17 @@
                 
                 function functionName1() {
                     var src = "img/css-letter-a.png";
-                    show_image("img/css-letter-a.png", 200, 200, "absolute", 1, "<alt>");
+                    show_image1("img/css-letter-a.png", 200, 200, "absolute", 1, "<alt>");
                 }
             
             
-                function show_image(src, width, height, position, zIndex, alt) {
+                function show_image1(src, width, height, position, zIndex, alt) {
                     var img = document.createElement("img");
                     img.src = src;
                     img.width = width;
-                    img.height = height
+                    img.height = height;
                     img.style.position = position;
-                    img.left = left;
+
                     img.style.zIndex = zIndex;
                     img.alt = alt;
             
@@ -50,28 +52,29 @@
         
             <div class = box2>
             <button onClick="functionName2();";>B</button>
+            
             <script>
                     
-                    function functionName2() {
-                        var src = "img/css-letter-b.png";
-                        show_image("img/css-letter-b.png", 200, 200, "absolute", 1, "<alt>");
-                    }
+                function functionName2() {
+                    var src = "img/css-letter-b.png";
+                    show_image2("img/css-letter-b.png", 200, 200, "absolute", 1, "<alt>");
+                }
                 
                 
-                    function show_image(src, width, height, position, zIndex, alt) {
+                    function show_image2(src, width, height, position, zIndex, alt) {
                         var img = document.createElement("img");
+                        
                         img.src = src;
-                        img.style.width = width;
-                        img.style.height = height
+                        img.width = width;
+                        img.height = height;
                         img.style.position = position;
-                        img.style.left = left+'px';
-                        img.style.top = top+'px';
+
                         img.style.zIndex = zIndex;
                         img.alt = alt;
                 
                         document.body.appendChild(img);
+                        
                     }   
-                    myImage = "img/css-letter-b.png";
                     
             </script>
             </div>
@@ -81,15 +84,17 @@
                 
                 function functionName3() {
                     var src = "img/css-letter-c.png";
-                    show_image("img/css-letter-c.png", 200, 200, "absolute", 1, "<alt>");
+                    show_image3("img/css-letter-c.png", 200, 200, "absolute", 1, "<alt>");
+                    var button = document.getElementById("myButton");
+                    button.style.display = "block";   
                 }
             
             
-                function show_image(src, width, height, position, zIndex, alt) {
+                function show_image3(src, width, height, position, zIndex, alt) {
                     var img = document.createElement("img");
                     img.src = src;
                     img.width = width;
-                    img.height = height
+                    img.height = height;
                     img.style.position = position;
                     
                     img.style.zIndex = zIndex;
@@ -100,18 +105,14 @@
                 myImage = "img/css-letter-c.png";
                 
             </script>
-            <button onClick="toggleImg;";>Hide</button>
+            <button onClick="hideButton()" id ="myButton" style="display: none;">Hide</button>
             <script>
-            myImage = "img/css-letter-c.png";    
-            if(myImage.style["visibility"]=="visible"){
-                myImage.style["visibility"]="hidden";
-            }
-            else
-            {
-                myImage.style["visibility"]="visible";
-            }
+                function hideButton() 
+                {
+                    var button = document.getElementById("myButton");
+                    button.style.display = "none";
+                }
             </script>
-            </div>
         </div>    
         
     </body>
