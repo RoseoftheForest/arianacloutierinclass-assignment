@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Comments Here!!!!-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Ari's Website and Assorted Info</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+           
+            
+    </head>
+    
+    <body>
+        <br>
+        <div class="border1">
+            <h1>
+            Welcome to the Interactive ABCs of CSS Technology learning Website
+            </h1>
+        </div>
+        <br>
+        <div class = "border2">
+            <h2>
+            Click on the buttons below to reveal and learn the CSS technology features of the corresponding letters 
+            </h2>
+        </div>
+            <div class = 'container'>
+                <div class = "box1">
+                <button onClick="functionName1();";>A</button>
+                <script>
+                
+                function functionName1() {
+                    var src = "img/css-letter-a.png";
+                    show_image1("img/css-letter-a.png", 200, 200, "absolute", 1, "<alt>");
+                }
+            
+            
+                function show_image1(src, width, height, position, zIndex, alt) {
+                    var img = document.createElement("img");
+                    img.src = src;
+                    img.width = width;
+                    img.height = height;
+                    img.style.position = position;
+
+                    img.style.zIndex = zIndex;
+                    img.alt = alt;
+            
+                    document.body.appendChild(img);
+                }   
+                
+                
+            </script>
+            </div>
+        
+            <div class = box2>
+            <button onClick="functionName2();";>B</button>
+            
+            <script>
+                    
+                function functionName2() {
+                    var src = "img/css-letter-b.png";
+                    show_image2("img/css-letter-b.png", 200, 200, "absolute", 1, "<alt>");
+                }
+                
+                
+                    function show_image2(src, width, height, position, zIndex, alt) {
+                        var img = document.createElement("img");
+                        
+                        img.src = src;
+                        img.width = width;
+                        img.height = height;
+                        img.style.position = position;
+
+                        img.style.zIndex = zIndex;
+                        img.alt = alt;
+                
+                        document.body.appendChild(img);
+                        
+                    }   
+                    
+            </script>
+            </div>
+            <div class = box3>
+            <button onClick="functionName3();";>C</button>
+            <script>
+                
+                function functionName3() {
+                    var src = "img/css-letter-c.png";
+                    show_image3("img/css-letter-c.png", 200, 200, "absolute", 1, "<alt>");
+                    var button = document.getElementById("myButton");
+                    button.style.display = "block";   
+                }
+            
+            
+                function show_image3(src, width, height, position, zIndex, alt) {
+                    var img = document.createElement("img");
+                    img.src = src;
+                    img.width = width;
+                    img.height = height;
+                    img.style.position = position;
+                    
+                    img.style.zIndex = zIndex;
+                    img.alt = alt;
+            
+                    document.body.appendChild(img);
+                }   
+                myImage = "img/css-letter-c.png";
+                
+            </script>
+            <button onClick="hideButton()" id ="myButton" style="display: none;">Hide</button>
+            <script>
+                function hideButton() 
+                {
+                    var button = document.getElementById("myButton");
+                    button.style.display = "none";
+                }
+            </script>
+        </div>    
+        
+    </body>
+    <footer>
+    </footer>
+</html>
